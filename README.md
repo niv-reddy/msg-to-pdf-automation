@@ -10,11 +10,11 @@ This project contains a Power Automate Desktop (PAD) workflow developed to batch
 
 ## Repository Contents
 
-- **msg_to_pdf_flow.txt**: The full Power Automate Desktop flow exported in text format.
-- **Batch MSG to PDF Automation – Documentation.pdf**: Complete documentation of the flow, including motivation, architecture, key features, results, and future plans.
-- **screenshots/**: Contains a visual overview of the PAD flow (e.g., `pad_flow.png`).
-- **.gitignore**: Configuration to exclude system and temporary files.
-- **README.md**: You're reading it.
+- [`msg_to_pdf_flow.txt`](./msg_to_pdf_flow.txt) – Exported Power Automate Desktop flow in plain text format
+- [`Batch MSG to PDF Automation – Documentation.pdf`](./Batch%20MSG%20to%20PDF%20Automation%20%E2%80%93%20Documentation.pdf) – Full PDF documentation of the project
+- [`screenshots/`](./screenshots/) – Folder containing a visual overview of the PAD flow
+- [`.gitignore`](./.gitignore) – Git ignore rules to keep the repo clean
+- [`README.md`](./README.md) – You're reading it
 
 ## Requirements
 
@@ -24,21 +24,21 @@ This project contains a Power Automate Desktop (PAD) workflow developed to batch
 
 ## Notes
 
-- The actual folders for input and output (`InputMSG`, `OutputPDF`, `FailedMSG`) are variables defined inside the flow. You’ll need to create these locally before running the automation.
-- The flow is built to run unattended, skipping duplicates and logging any failed conversions by moving them to a specified folder.
-- Minimal UI automation is used to maximize reliability — only the Outlook print command uses UI elements.
+- The folders for input, output, and failed files are configured as variables in the flow (e.g., `InputMSG`, `OutputPDF`, `FailedMSG`). These must be created locally before running the automation.
+- The flow skips existing files and moves any failures to the designated folder for later review.
+- Minimal UI automation is used (only to trigger the Outlook print dialog); most steps rely on keyboard input for reliability.
 
 ## Status
 
 - Successfully converted 552 `.msg` files in a test run
-- Only 1 failure, which was automatically handled
+- 1 failure, automatically handled by moving to the failure folder
 - Total runtime: ~3 hours and 36 minutes
 
 ## Future Enhancements
 
-- Add retry logic for failed files
-- Implement CSV logging of metadata (subject, sender, date)
-- Improve notification and logging visibility
+- Add retry logic for failed `.msg` files
+- Extract and log metadata (subject, sender, date) to a CSV
+- Timestamped logging for auditing or reporting purposes
 
 ## Author
 
