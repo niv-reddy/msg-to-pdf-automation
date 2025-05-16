@@ -1,0 +1,26 @@
+# macOS system files
+.DS_Store
+
+# Power Automate Desktop temp/backup files (if any)
+*.tmp
+*.bak
+*.log
+*.pad~
+
+# IDEs/editors
+.vscode/
+.idea/
+*.code-workspace
+
+# Python/Node junk (if ever used)
+__pycache__/
+node_modules/
+
+# Output folders (optional - if you don’t want to track generated files)
+OutputPDF/
+FailedMSG/
+
+# Other backups or archives
+*.zip
+*.rar
+*.7z
