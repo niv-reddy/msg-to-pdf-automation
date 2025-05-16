@@ -28,7 +28,7 @@ This project contains a Power Automate Desktop (PAD) workflow developed to batch
 - The flow skips existing files and moves any failures to the designated folder for later review.
 - Minimal UI automation is used (only to trigger the Outlook print dialog); most steps rely on keyboard input for reliability.
 
-## Status
+## Test Case Outcome
 
 - Successfully converted 552 `.msg` files in a test run
 - 1 failure, automatically handled by moving to the failure folder
